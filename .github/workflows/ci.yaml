@@ -2,13 +2,14 @@ name: IntegrationContinue
 on:
   push:
     branches:
-      - main
-      - feature/**
+    - main
+    - feature/**
       
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
       - uses: actions/checkout@v4
       - name: Set up Python 3.8
         uses: actions/setup-python@v5
